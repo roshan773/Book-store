@@ -8,7 +8,7 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-app.get("/", () => {
+app.get("/", (req, res) => {
     res.send("Routes is working")
 })
 app.use("/api/book/", bookRouter)
