@@ -9,7 +9,7 @@ const Home = () => {
 
   const fetchBooks = async () => {
     try {
-      const res = await axios.get("http://localhost:8080/api/book/books");
+      const res = await axios.get("https://book-store-db.onrender.com/books");
       setBooks(res.data.book);
     } catch (err) {
       console.error("Error fetching books:", err);
