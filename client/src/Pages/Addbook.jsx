@@ -82,18 +82,6 @@ const Addbook = () => {
             />
           </div>
 
-          <div className="col-12">
-            <label className="form-label">Image URL (optional)</label>
-            <input
-              type="text"
-              className="form-control rounded-3"
-              name="img"
-              value={form.img}
-              onChange={handleChange}
-              placeholder="Paste book cover URL"
-            />
-          </div>
-
           <div className="col-12 text-end">
             <button type="submit" className="btn btn-success rounded-pill px-4">
               + Add Book
