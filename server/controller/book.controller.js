@@ -1,4 +1,4 @@
-const { findByIdAndUpdate, findByIdAndDelete, findById } = require("../../../Blog-Details/server/model/blog.model")
+// const { findByIdAndUpdate, findByIdAndDelete, findById } = require("../../../Blog-Details/server/model/blog.model")
 const Book = require("../model/user.model")
 
 const bookController = {
