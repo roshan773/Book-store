@@ -9,7 +9,7 @@ const Bookdetail = () => {
   const [book, setBook] = useState(null);
 
   useEffect(() => {
-    axios.get(`http://localhost:8080/api/book/detail/${id}`)
+    axios.get(`https://book-store-db.onrender.com/api/book/detail/${id}`)
       .then(res => setBook(res.data.book))
       .catch(err => console.error("Error fetching book:", err));
   }, [id]);
@@ -17,7 +17,7 @@ const Bookdetail = () => {
   const handleDelete = async () => {
     if (window.confirm("Are you sure you want to delete this book?")) {
       try {
-        await axios.delete(`http://localhost:8080/api/book/delete/${id}`);
+        await axios.delete(`https://book-store-db.onrender.com/api/book/delete/${id}`);
         alert("Book deleted successfully.");
         navigate("/");
       } catch (error) {

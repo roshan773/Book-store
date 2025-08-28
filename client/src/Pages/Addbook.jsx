@@ -23,7 +23,7 @@ const Addbook = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:8080/api/book/addbook", form);
+      const res = await axios.post("https://book-store-db.onrender.com/api/book/addbook", form);
       toast.success(res.data.message || "Book added successfully!", {
         position: "top-right",
       });

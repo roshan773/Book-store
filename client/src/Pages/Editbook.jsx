@@ -14,7 +14,7 @@ const Editbook = () => {
   });
 
   useEffect(() => {
-    axios.get(`http://localhost:8080/api/book/detail/${id}`).then((res) => {
+    axios.get(`https://book-store-db.onrender.com/api/book/detail/${id}`).then((res) => {
       setForm(res.data.book);
     });
   }, [id]);
@@ -25,7 +25,7 @@ const Editbook = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios.put(`http://localhost:8080/api/book/updatebook/${id}`, form);
+    await axios.put(`https://book-store-db.onrender.com/api/book/updatebook/${id}`, form);
     navigate("/");
   };
 
